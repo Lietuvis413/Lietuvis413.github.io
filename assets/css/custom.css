@@ -1,0 +1,420 @@
+/* ==========================================
+   CUSTOM STILIAI (assets/css/custom.css)
+   Auksinė + Tamsiai žalia tema
+   ========================================== */
+
+/* 1. Globalios spalvos ir NAUJI ŠRIFTAI (Montserrat + Inter) */
+:root {
+  --accent-color: #d4af37 !important;        /* Prabangi auksinė spalva */
+  --nav-hover-color: #d4af37 !important;    /* Auksinė spalva užvedus meniu */
+  --heading-font: "Montserrat", sans-serif !important; /* Naujas antraščių šriftas */
+  --default-font: "Inter", sans-serif !important;      /* Naujas tekstinis šriftas */
+  --nav-font: "Inter", sans-serif !important;          /* Naujas navigacijos šriftas */
+}
+
+/* 2. Pagrindinis svetainės fonas ir tekstas */
+body {
+  font-family: var(--default-font) !important;
+  background-color: #0b1d16 !important;     /* Gilus tamsiai žalias fonas */
+  color: #e2e8f0 !important;
+}
+
+/* 3. Visos antraštės su NAUJU šriftu (Montserrat) */
+h1, h2, h3, h4, h5, h6,
+.section-title h2,
+.hero .hero-content h1,
+.hero .hero-content h2 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-weight: 700 !important;
+  color: #d4af37 !important;                 /* Auksinė spalva antraštėms */
+}
+
+/* Sekcijų h2 antraščių linija po apačia */
+.section-title h2 {
+  border-bottom: 3px solid #d4af37 !important;
+  display: inline-block !important;
+  padding-bottom: 6px !important;
+}
+
+/* 4. Sutvarkytas navigacijos meniu (BE ORANŽINIŲ BLOKŲ) */
+.navmenu a, 
+.navmenu a:focus {
+  background-color: transparent !important; /* Pašalina užpildo bloką */
+  color: #ffffff !important;                /* Balta tekstinė nuoroda */
+}
+
+.navmenu a:hover, 
+.navmenu .active,
+.navmenu .active:focus {
+  background-color: transparent !important;
+  color: #d4af37 !important;                /* Auksinė spalva užvedus arba aktyviai nuorodai */
+}
+
+.navmenu>ul>li>a:before {
+  background-color: #d4af37 !important;     /* Maža linija po meniu nuoroda */
+}
+
+/* 5. Hero bloko (index.html) akcentai ir mygtukai */
+.hero .hero-content h1 .highlight,
+.hero .hero-content h2 .typed {
+  color: #d4af37 !important;
+}
+
+.hero .hero-content h1 .highlight::after {
+  background: #d4af37 !important;
+}
+
+.hero .hero-actions .btn.btn-primary {
+  background: #d4af37 !important;
+  border-color: #d4af37 !important;
+  color: #0b1d16 !important;
+}
+
+.hero .hero-actions .btn.btn-outline {
+  color: #d4af37 !important;
+  border-color: #d4af37 !important;
+}
+
+/* 6. Lentelės ir sąrašų kortelės (Šiek tiek šviesesnis tamsiai žalias fonas) */
+.table-dark {
+  background-color: #122c22 !important;
+  border: 1px solid #1e4435 !important;
+}
+
+.table-dark th {
+  background-color: #18382b !important;
+  color: #d4af37 !important;
+}
+
+.border-secondary {
+  border-color: #1e4435 !important;
+  background-color: #122c22 !important;
+}
+
+/* 7. Pastraipos */
+p, .section-title p, .hero .hero-content p {
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+  color: #cbd5e1 !important;
+}
+
+/* ==========================================
+   3. MYGTUKAI IR NUORODOS (Buttons & Links)
+   ========================================== */
+
+/* b. Bendras nuorodų stilius */
+a {
+  color: #d4af37 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* b. Nuorodos užvedus pelę (:hover) ir paspaudus (:active) */
+a:hover {
+  color: #f3e5ab !important; /* Šviesesnis aukso atspalvis užvedus */
+  text-decoration: underline !important;
+}
+
+a:active {
+  color: #b38f24 !important; /* Tamsesnis aukso atspalvis paspaudus */
+}
+
+/* a. Pagrindiniai mygtukai (pvz., "Mano projektai") */
+.btn-primary, 
+.hero .hero-actions .btn.btn-primary {
+  background-color: #d4af37 !important;
+  border-color: #d4af37 !important;
+  color: #0b1d16 !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+}
+
+/* a. Mygtukas užvedus pelę (:hover) */
+.btn-primary:hover, 
+.hero .hero-actions .btn.btn-primary:hover {
+  background-color: #f3e5ab !important;
+  border-color: #f3e5ab !important;
+  color: #0b1d16 !important;
+  transform: translateY(-3px) !important; /* Mygtukas lengvai pakyla */
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4) !important;
+}
+
+/* a. Mygtukas paspaudus (:active) */
+.btn-primary:active, 
+.hero .hero-actions .btn.btn-primary:active {
+  background-color: #b38f24 !important;
+  border-color: #b38f24 !important;
+  transform: translateY(-1px) !important;
+}
+
+/* a. Kontūriniai mygtukai (pvz., "Kontaktai") */
+.btn-outline, 
+.hero .hero-actions .btn.btn-outline {
+  background-color: transparent !important;
+  color: #d4af37 !important;
+  border: 2px solid #d4af37 !important;
+  transition: all 0.3s ease !important;
+}
+
+.btn-outline:hover, 
+.hero .hero-actions .btn.btn-outline:hover {
+  background-color: #d4af37 !important;
+  color: #0b1d16 !important;
+  transform: translateY(-3px) !important;
+}
+
+.btn-outline:active, 
+.hero .hero-actions .btn.btn-outline:active {
+  background-color: #b38f24 !important;
+  border-color: #b38f24 !important;
+  color: #0b1d16 !important;
+}
+
+/* a. Socialinių tinklų piktogramos / mygtukai apačioje */
+.hero .social-links a {
+  background: #122c22 !important;
+  color: #d4af37 !important;
+  border: 1px solid #1e4435 !important;
+  transition: all 0.3s ease !important;
+}
+
+.hero .social-links a:hover {
+  background: #d4af37 !important;
+  color: #0b1d16 !important;
+  transform: translateY(-3px) !important;
+}
+
+/* ==========================================
+   4. ELEMENTŲ IŠDĖSTYMAS IR KORTELĖS (Layout & Box Styles)
+   ========================================== */
+
+/* a. Vidiniai tarpai sekcijoms: „Apie“, „Patirtis“, „Projektai“ */
+.about.section,
+.resume.section,
+.portfolio.section,
+.services.section {
+  padding: 80px 0 !important; /* Padidintas viršutinis ir apatinis tarpas skiltims */
+}
+
+/* a. Sekcijų antraščių išoriniai tarpai */
+.section-title {
+  padding-bottom: 40px !important;
+  margin-bottom: 20px !important;
+}
+
+/* b. Turinio blokų ir kortelių užapvalinimai, rėmeliai bei šešėliai */
+
+/* Įgūdžių, patirties ir paslaugų kortelės */
+.about .skill-item,
+.skills .skill-box,
+.services .service-item,
+.portfolio .portfolio-card,
+.resume .resume-item {
+  border: 1px solid #1e4435 !important;            /* Žalias elegantiškas rėmelis */
+  border-radius: 16px !important;                  /* Užapvalinti kampai */
+  background-color: #122c22 !important;            /* Tamsiai žalias blokų fonas */
+  padding: 28px !important;                        /* Vidiniai kortelių tarpai */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35) !important; /* Šešėliai */
+  transition: all 0.3s ease !important;
+}
+
+/* b. Kortelių reakcija užvedus pelę (Hover) */
+.about .skill-item:hover,
+.skills .skill-box:hover,
+.services .service-item:hover,
+.portfolio .portfolio-card:hover {
+  transform: translateY(-5px) !important;
+  border-color: #d4af37 !important;                /* Rėmelis nušvinta auksine spalva */
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.25) !important; /* Auksinis švytėjimas */
+}
+
+/* ==========================================
+   5. DVIENŲ PASIRINKTŲ KOMPONENTŲ STILIAI
+   ========================================== */
+
+/* KOMPONENTAS 1: Navigacijos juosta (Header / Nav Container) */
+.header {
+  background-color: #0b1d16 !important;            /* 1. Savybė: Tamsiai žalias fonas */
+  border-bottom: 2px solid #d4af37 !important;       /* 2. Savybė: Auksinė apatinė kraštinė */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;/* 3. Savybė: Šešėlis po navigacija */
+  padding: 15px 25px !important;                     /* 4. Savybė: Vidiniai tarpai */
+}
+
+/* Navigacijos meniu kapsulė (kad tekstai nepersidengtų) */
+.header .navmenu {
+  background-color: #122c22 !important;            /* Fonas meniu kapsulei */
+  border: 1px solid #1e4435 !important;             /* Rėmelis */
+  border-radius: 30px !important;                   /* Užapvalinti kampai */
+  padding: 6px 20px !important;                     /* Vidiniai tarpai */
+}
+
+
+/* KOMPONENTAS 2: Progreso juostos (Progress Bars - Įgūdžių sekcija) */
+.skills .skill-box .progress {
+  background-color: #18382b !important;            /* 1. Savybė: Progreso juostos fonas */
+  height: 12px !important;                          /* 2. Savybė: Didesnis juostos aukštis */
+  border-radius: 20px !important;                   /* 3. Savybė: Didelis užapvalinimas */
+  border: 1px solid #1e4435 !important;             /* 4. Savybė: Kraštinė aplink juostą */
+  overflow: hidden !important;
+}
+
+.skills .skill-box .progress .progress-bar {
+  background: linear-gradient(90deg, #b38f24, #d4af37) !important; /* Auksinis gradientas */
+  border-radius: 20px !important;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5) !important; /* Auksinis švytėjimas */
+}
+
+/* ==========================================
+   6. HTML SĄRAŠŲ STILIAI (Lists & Nested Lists)
+   ========================================== */
+
+/* Pastūmimas ir bazinis sąrašų išvalymas */
+.services ul, 
+.services ol {
+  list-style: none !important; /* Pašaliname standartinius punktus/skaičius */
+  padding-left: 0 !important;
+}
+
+/* ------------------------------------------
+   a. NENUMERUOTAS SĄRAŠAS (ul) su pseudo-elementu ::before
+   ------------------------------------------ */
+.services ul > li {
+  position: relative !important;
+  padding-left: 28px !important;
+  margin-bottom: 12px !important;
+  font-size: 1.05rem !important;
+}
+
+/* Pagrindinio nenumeruoto sąrašo auksinis ženklelis */
+.services ul > li::before {
+  content: "◆" !important;                    /* Stilingas deimanto ženklelis */
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  color: #d4af37 !important;                  /* Auksinė spalva */
+  font-size: 0.9rem !important;
+}
+
+/* ------------------------------------------
+   b. ĮDĖTINIS SĄRAŠAS (Nested List: ul ul)
+   ------------------------------------------ */
+.services ul ul {
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+  padding-left: 15px !important;             /* Įtrauka į dešinę */
+  border-left: 2px solid #1e4435 !important;  /* Žalia vertikali linija kairėje */
+}
+
+.services ul ul > li {
+  padding-left: 20px !important;
+  margin-bottom: 6px !important;
+  font-size: 0.95rem !important;
+  color: #cbd5e1 !important;                 /* Švelnesnė pilkšva spalva */
+}
+
+/* Įdėtinio sąrašo kitoks ženklelis (vizualus skirtumas) */
+.services ul ul > li::before {
+  content: "›" !important;                    /* Rodyklės ženklelis */
+  color: #00d2ff !important;                  /* Melsvas akcentas įdėtiniam sąrašui */
+  font-size: 1.2rem !important;
+  top: -2px !important;
+}
+
+/* ------------------------------------------
+   NUMERUOTAS SĄRAŠAS (ol) su stilingais skaičiais
+   ------------------------------------------ */
+.services ol {
+  counter-reset: custom-counter !important;
+  list-style: none !important;
+  padding-left: 0 !important;
+}
+
+.services ol > li {
+  counter-increment: custom-counter !important;
+  position: relative !important;
+  padding-left: 42px !important;              /* Padidintas tarpas nuo skaičiaus iki teksto */
+  margin-bottom: 16px !important;
+  font-size: 1.05rem !important;
+}
+
+/* Stilingas skaičiaus burbulas */
+.services ol > li::before {
+  content: counter(custom-counter) !important;
+  position: absolute !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 28px !important;
+  height: 28px !important;
+  line-height: 26px !important;               /* Skaičiaus centravimas vertikaliai */
+  text-align: center !important;              /* Skaičiaus centravimas horizontaliai */
+  background-color: #18382b !important;       /* Tamsiai žalias skaičiaus fonas */
+  border: 1px solid #d4af37 !important;        /* Auksinis rėmelis */
+  color: #d4af37 !important;                   /* Auksinis skaičius */
+  border-radius: 50% !important;               /* Apvalus burbulas */
+  font-size: 0.85rem !important;
+  font-weight: 700 !important;
+}
+
+/* ==========================================
+   7. LENTELĖS STILIAI (High Contrast Table Customization)
+   ========================================== */
+
+/* Pagrindinis lentelės konteinerio stilius */
+.table, 
+.table-dark {
+  width: 100% !important;
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  border: 2px solid #d4af37 !important;            /* Ryškesnis auksinis lentelės rėmelis */
+  background-color: #122c22 !important;
+}
+
+/* c. Vienodi langelių vidiniai tarpai (padding) ir turinio lygiavimas centre */
+.table th, 
+.table td {
+  padding: 18px 20px !important;                 /* Didesni, vienodi tarpai */
+  text-align: center !important;                 /* Turinio lygiavimas centre */
+  vertical-align: middle !important;
+  border-bottom: 1px solid #23523f !important;    /* Šviesesnė skyriamoji linija */
+}
+
+/* a. Antraštinės eilutės stilius (Aukštas kontrastas) */
+.table thead th,
+.table-dark th {
+  background-color: #1a4233 !important;          /* Šviesesnis ir geriau matomas žalias fonas */
+  color: #ffd700 !important;                      /* Ryški, švytinti auksinė spalva */
+  font-family: 'Raleway', sans-serif !important;
+  font-size: 1.15rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;           /* Didžiosios raidės */
+  letter-spacing: 1.5px !important;
+  border-bottom: 3px solid #ffd700 !important;    /* Stora auksinė linija */
+}
+
+/* b. "Zebra" stilius (Aiškus eilučių atskyrimas) */
+.table tbody tr:nth-child(odd) {
+  background-color: #0e221b !important;          /* Tamsesnė pilkšva-žalia eilutė */
+  color: #ffffff !important;                     /* Balta, ryškiai matoma teksto spalva */
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #17382c !important;          /* Šviesesnė žalia eilutė akivaizdžiam zebra efektui */
+  color: #ffffff !important;                     /* Balta teksto spalva */
+}
+
+/* Duomenų tekstų spaudimo ryškumas */
+.table tbody td {
+  color: #f1f5f9 !important;                     /* Labai šviesi pilka/balta spalva geresniam skaitomumui */
+  font-size: 1.05rem !important;
+}
+
+/* b. Eilutės :hover efektas (užvedus pelę) */
+.table tbody tr:hover {
+  background-color: #245442 !important;          /* Ryškiai apšviesta eilutė užvedus */
+  transition: background-color 0.2s ease !important;
+}
+
+.table tbody tr:hover td {
+  color: #ffd700 !important;                     /* Tekstas užvedus pelę nušvinta auksine spalva */
+}
