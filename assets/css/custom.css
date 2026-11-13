@@ -418,3 +418,413 @@ a:active {
 .table tbody tr:hover td {
   color: #ffd700 !important;                     /* Tekstas užvedus pelę nušvinta auksine spalva */
 }
+
+/* ==========================================
+   8–10. KOMPETENCIJŲ PAŽANGOS MODULIS (Skill Kanban)
+   ========================================== */
+
+.competency-section {
+  padding: 80px 0 !important;
+}
+
+.text-gold {
+  color: #d4af37 !important;
+}
+
+.border-green-subtle {
+  border-color: #1e4435 !important;
+}
+
+/* Viršutinė suvestinės kortelė (veikia abiem klasių pavadinimams) */
+.kanban-summary-box,
+.kanban-summary-wrapper {
+  background-color: #122c22 !important;
+  border: 1px solid #1e4435 !important;
+  border-radius: 16px !important;
+  padding: 32px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35) !important;
+}
+
+/* 3 statistikos kortelės viršuje */
+.stat-pill-card {
+  display: flex !important;
+  align-items: center !important;
+  gap: 15px !important;
+  padding: 18px 22px !important;
+  border-radius: 12px !important;
+  background-color: #0e221b !important;
+  border: 1px solid #1e4435 !important;
+  transition: transform 0.25s ease !important;
+}
+
+.stat-pill-card:hover {
+  transform: translateY(-2px) !important;
+}
+
+.stat-xp { border-left: 4px solid #d4af37 !important; }
+.stat-level { border-left: 4px solid #d97736 !important; }
+.stat-rank { border-left: 4px solid #d4af37 !important; }
+
+.stat-pill-card .stat-icon {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.4rem !important;
+}
+
+.stat-xp .stat-icon,
+.stat-rank .stat-icon {
+  background-color: rgba(212, 175, 55, 0.15) !important;
+  color: #d4af37 !important;
+}
+
+.stat-level .stat-icon {
+  background-color: rgba(217, 119, 54, 0.15) !important;
+  color: #e08e55 !important;
+}
+
+.stat-label {
+  font-size: 0.85rem !important;
+  color: #94a3b8 !important;
+  display: block !important;
+}
+
+.stat-value {
+  margin: 0 !important;
+  font-size: 1.35rem !important;
+  color: #ffffff !important;
+}
+
+/* Perskyra ir progreso juosta suvestinėje */
+.level-progress-wrapper {
+  margin-top: 28px !important;
+  padding-top: 24px !important;
+  border-top: 1px solid #265743 !important;
+}
+
+.level-progress-wrapper .progress {
+  height: 16px !important;
+  background-color: #0e221b !important;
+  border-radius: 20px !important;
+  border: 1px solid #1e4435 !important;
+}
+
+.level-progress-wrapper .progress-bar {
+  background: linear-gradient(90deg, #b38f24, #ffd700) !important;
+  color: #0b1d16 !important;
+  font-weight: 700 !important;
+  font-size: 0.75rem !important;
+}
+
+/* Perskyra ir apatinė statistikos eilutė */
+.meta-stats {
+  margin-top: 28px !important;
+  padding-top: 22px !important;
+  border-top: 1px solid #265743 !important;
+  font-size: 1.05rem !important;
+  color: #cbd5e1 !important;
+}
+
+.meta-stats .stat-divider {
+  border-left: 1px solid #265743 !important;
+  border-right: 1px solid #265743 !important;
+}
+
+.meta-stats strong {
+  color: #ffffff !important;
+  font-size: 1.15rem !important;
+  margin-left: 4px !important;
+}
+
+/* Kanban stulpeliai (Planuojama, Mokomasi, Atlikta) */
+.kanban-column {
+  background-color: #122c22 !important;
+  border: 1px solid #1e4435 !important;
+  border-radius: 16px !important;
+  padding: 20px !important;
+  height: 100% !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+}
+
+.kanban-col-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  padding: 12px 16px !important;
+  border-radius: 10px !important;
+  margin-bottom: 20px !important;
+}
+
+.kanban-col-header h3 {
+  margin: 0 !important;
+  font-size: 1.25rem !important;
+}
+
+/* 1 KATEGORIJA: Planuojama (Sendinta bronza) */
+.col-planned .kanban-col-header {
+  background-color: rgba(168, 159, 145, 0.12) !important;
+  border-bottom: 2px solid #8c8275 !important;
+}
+.col-planned .kanban-col-header i,
+.col-planned .kanban-col-header h3 {
+  color: #c7bfb3 !important;
+}
+
+/* 2 KATEGORIJA: Mokomasi (Šiltas varis / gintaras) */
+.col-learning .kanban-col-header {
+  background-color: rgba(217, 119, 54, 0.14) !important;
+  border-bottom: 2px solid #d97736 !important;
+}
+.col-learning .kanban-col-header i,
+.col-learning .kanban-col-header h3 {
+  color: #e6955c !important;
+}
+
+/* 3 KATEGORIJA: Atlikta (Karališkas auksas) */
+.col-done .kanban-col-header {
+  background-color: rgba(212, 175, 55, 0.16) !important;
+  border-bottom: 2px solid #d4af37 !important;
+}
+.col-done .kanban-col-header i,
+.col-done .kanban-col-header h3 {
+  color: #ffd700 !important;
+}
+
+/* CSS Grid tinklelis kortelėms stulpelių viduje */
+.kanban-cards {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 14px !important;
+}
+
+/* Individualios įgūdžių kortelės */
+.skill-kanban-card {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 14px !important;
+  background-color: #0e221b !important;
+  border: 1px solid #1e4435 !important;
+  border-radius: 12px !important;
+  padding: 16px !important;
+  margin-bottom: 0 !important;
+  transition: all 0.3s ease !important;
+}
+
+.skill-kanban-card:hover {
+  transform: translateY(-3px) !important;
+  border-color: #d4af37 !important;
+  box-shadow: 0 6px 18px rgba(212, 175, 55, 0.2) !important;
+}
+
+.skill-kanban-card .card-icon {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 8px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 1.2rem !important;
+  flex-shrink: 0 !important;
+}
+
+.icon-planned { background-color: rgba(168, 159, 145, 0.14) !important; color: #c7bfb3 !important; }
+.icon-learning { background-color: rgba(217, 119, 54, 0.15) !important; color: #e6955c !important; }
+.icon-done { background-color: rgba(212, 175, 55, 0.16) !important; color: #ffd700 !important; }
+
+.skill-kanban-card h5 {
+  font-size: 1rem !important;
+  color: #ffffff !important;
+  margin-bottom: 8px !important;
+  font-weight: 600 !important;
+}
+
+.card-badges {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+}
+
+.badge-status, .badge-xp {
+  font-size: 0.78rem !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  font-weight: 600 !important;
+}
+
+.status-planned {
+  background-color: rgba(168, 159, 145, 0.16) !important;
+  color: #d6cfc5 !important;
+  border: 1px solid rgba(168, 159, 145, 0.25) !important;
+}
+
+.status-learning {
+  background-color: rgba(217, 119, 54, 0.18) !important;
+  color: #f2b488 !important;
+  border: 1px solid rgba(217, 119, 54, 0.3) !important;
+}
+
+.status-done {
+  background-color: rgba(212, 175, 55, 0.2) !important;
+  color: #ffe875 !important;
+  border: 1px solid rgba(212, 175, 55, 0.35) !important;
+}
+
+.badge-xp {
+  background-color: #18382b !important;
+  color: #d4af37 !important;
+  border: 1px solid #2a5c48 !important;
+}
+
+/* Mobilus prisitaikymas mažesniuose ekranuose */
+@media (max-width: 768px) {
+  .meta-stats .stat-divider {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: 1px solid #285946 !important;
+    border-bottom: 1px solid #285946 !important;
+    padding: 10px 0 !important;
+    margin: 10px 0 !important;
+  }
+}
+
+/* ==========================================
+   PAPILDOMA UŽDUOTIS 1: Sklandžiai pulsuojantis gradientas (#services)
+   ========================================== */
+@property --grad-color-1 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #0b1d16;
+}
+
+@property --grad-color-2 {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #122c22;
+}
+
+#services {
+  background: linear-gradient(135deg, var(--grad-color-1) 0%, var(--grad-color-2) 100%) !important;
+  animation: servicesColorPulse 14s ease-in-out infinite !important;
+}
+
+@keyframes servicesColorPulse {
+  0%, 100% {
+    /* 1. Tamsiai žalia */
+    --grad-color-1: #0b1d16;
+    --grad-color-2: #122c22;
+  }
+  25% {
+    /* 2. Gilus smaragdas (prislopinta šviesesnė žalia) */
+    --grad-color-1: #103325;
+    --grad-color-2: #194d38;
+  }
+  50% {
+    /* 3. Grįžta į tamsiai žalią */
+    --grad-color-1: #0b1d16;
+    --grad-color-2: #122c22;
+  }
+  75% {
+    /* 4. Tamsi sendinta bronza / auksas */
+    --grad-color-1: #29210b;
+    --grad-color-2: #544314;
+  }
+}
+
+/* ==========================================
+   PAPILDOMA UŽDUOTIS 2: Animuotos CSS figūros ("Apie" skiltyje)
+   ========================================== */
+
+/* Užtikriname, kad #about sekcija turėtų position: relative ir turinys liktų virš figūrų */
+#about,
+.about.section {
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+#about .container,
+.about.section .container {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Bendras figūrų konteineris fone */
+.about-css-shapes {
+  position: absolute !important;
+  inset: 0 !important;
+  pointer-events: none !important; /* Kad figūros netrukdytų spausti mygtukų ar žymėti teksto */
+  z-index: 1 !important;
+}
+
+.css-shape {
+  position: absolute !important;
+  opacity: 0.8 !important; /* Padidintas ryškumas (buvo 0.45) */
+}
+
+/* 1 FIGŪRA: Apskritimas (Rotating) */
+.shape-circle {
+  top: 90px !important;
+  right: 8% !important;
+  width: 115px !important;
+  height: 115px !important;
+  border-radius: 50% !important;
+  border: 3px dashed #d4af37 !important;
+  box-shadow: 0 0 22px rgba(212, 175, 55, 0.25), inset 0 0 18px rgba(212, 175, 55, 0.2) !important;
+  animation: shapeRotate 18s linear infinite !important;
+}
+
+/* 2 FIGŪRA: Trikampis (Floating) */
+.shape-triangle {
+  bottom: 110px !important;
+  left: 6% !important;
+  width: 0 !important;
+  height: 0 !important;
+  border-left: 36px solid transparent !important;
+  border-right: 36px solid transparent !important;
+  border-bottom: 62px solid rgba(217, 119, 54, 0.65) !important; /* Ryškesnis varis */
+  animation: shapeFloat 7s ease-in-out infinite !important;
+}
+
+/* 3 FIGŪRA: Rombas / kvadratas (Scaling) */
+.shape-diamond {
+  top: 48% !important;
+  right: 14% !important;
+  width: 52px !important;
+  height: 52px !important;
+  border: 3px solid #c7bfb3 !important; /* Ryškesnė sendinta bronza */
+  background-color: rgba(199, 191, 179, 0.16) !important;
+  animation: shapeScale 6s ease-in-out infinite !important;
+}
+
+/* Animacijos */
+@keyframes shapeRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shapeFloat {
+  0%, 100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  33% {
+    transform: translate(18px, -22px) rotate(8deg);
+  }
+  66% {
+    transform: translate(-12px, -10px) rotate(-6deg);
+  }
+}
+
+@keyframes shapeScale {
+  0%, 100% {
+    transform: rotate(45deg) scale(0.85);
+  }
+  50% {
+    transform: rotate(45deg) scale(1.25);
+  }
+}
