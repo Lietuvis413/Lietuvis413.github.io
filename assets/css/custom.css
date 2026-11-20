@@ -828,3 +828,105 @@ a:active {
     transform: rotate(45deg) scale(1.25);
   }
 }
+
+/* ==========================================
+   KONTAKTŲ PUSLAPIO SPALVŲ DERINIMAS
+   ========================================== */
+.contact .info-box,
+.contact .contact-form {
+  background-color: #122c22 !important;
+  border: 1px solid rgba(212, 175, 55, 0.25) !important;
+  border-radius: 12px !important;
+}
+
+.contact .form-control {
+  background-color: #0b1d16 !important;
+  border: 1px solid rgba(168, 159, 145, 0.35) !important;
+  color: #f3f1ed !important;
+}
+
+.contact .form-control:focus {
+  border-color: #d4af37 !important;
+  box-shadow: 0 0 0 0.2rem rgba(212, 175, 55, 0.2) !important;
+}
+
+/* Auksinis slankiklis (vietoj standartinio mėlyno) */
+.contact .form-range::-webkit-slider-runnable-track {
+  background-color: #0b1d16 !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  height: 8px !important;
+  border-radius: 4px !important;
+}
+
+.contact .form-range::-webkit-slider-thumb {
+  background-color: #d4af37 !important;
+  border: 2px solid #0b1d16 !important;
+  margin-top: -5px !important;
+}
+
+.contact .form-range::-moz-range-track {
+  background-color: #0b1d16 !important;
+  border: 1px solid rgba(212, 175, 55, 0.3) !important;
+  height: 8px !important;
+  border-radius: 4px !important;
+}
+
+.contact .form-range::-moz-range-thumb {
+  background-color: #d4af37 !important;
+  border: 2px solid #0b1d16 !important;
+}
+
+/* Mygtukas "Siųsti" */
+.contact #submitBtn {
+  background-color: #d4af37 !important;
+  color: #0b1d16 !important;
+  font-weight: 600 !important;
+  padding: 10px 32px !important;
+  border-radius: 8px !important;
+  border: none !important;
+  transition: all 0.25s ease !important;
+}
+
+.contact #submitBtn:hover:not(:disabled) {
+  background-color: #e5c158 !important;
+  transform: translateY(-2px);
+}
+
+/* Neaktyvus mygtukas "Siųsti" (6 punktas) */
+.contact #submitBtn:disabled {
+  background-color: rgba(168, 159, 145, 0.25) !important;
+  color: rgba(243, 241, 237, 0.45) !important;
+  cursor: not-allowed !important;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+/* Validacijos klaidų stiliai (Papildoma užduotis 1f) */
+.contact .form-control.input-error {
+  border-color: #e05252 !important;
+  box-shadow: 0 0 0 0.2rem rgba(224, 82, 82, 0.25) !important;
+}
+
+.contact .error-text {
+  display: block;
+  color: #f07171;
+  font-size: 0.85rem;
+  margin-top: 5px;
+  min-height: 1.2em;
+}
+
+/* Mygtukas "Išvalyti" (Papildoma užduotis 3a) */
+.contact #clearBtn {
+  background-color: transparent !important;
+  color: #d4af37 !important;
+  border: 1px solid #d4af37 !important;
+  font-weight: 600 !important;
+  padding: 10px 32px !important;
+  border-radius: 8px !important;
+  transition: all 0.25s ease !important;
+}
+
+.contact #clearBtn:hover {
+  background-color: rgba(212, 175, 55, 0.15) !important;
+  transform: translateY(-2px);
+}
