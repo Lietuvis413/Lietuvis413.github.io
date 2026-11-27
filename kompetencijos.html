@@ -139,7 +139,7 @@
           </div>
 
         </div>
-        <!-- 3 stulpelių Kanban lenta -->
+        <!-- 3 stulpelių Kanban lenta (kortelės generuojamos dinamiškai per custom.js) -->
         <div class="row g-4 kanban-board">
 
           <!-- 1 KATEGORIJA: Planuojama -->
@@ -150,31 +150,7 @@
                 <h3>Planuojama</h3>
               </div>
 
-              <div class="kanban-cards">
-                <!-- Įgūdis 1 -->
-                <div class="skill-kanban-card">
-                  <div class="card-icon icon-planned"><i class="bi bi-cpu"></i></div>
-                  <div class="card-details">
-                    <h5>FPGA ir Verilog pagrindai</h5>
-                    <div class="card-badges">
-                      <span class="badge-status status-planned">Būsena: Planuojama</span>
-                      <span class="badge-xp">XP: 70</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Įgūdis 2 -->
-                <div class="skill-kanban-card">
-                  <div class="card-icon icon-planned"><i class="bi bi-broadcast"></i></div>
-                  <div class="card-details">
-                    <h5>RF schemų ir antenų derinimas</h5>
-                    <div class="card-badges">
-                      <span class="badge-status status-planned">Būsena: Planuojama</span>
-                      <span class="badge-xp">XP: 60</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="kanban-cards" id="cards-planned"></div>
             </div>
           </div>
 
@@ -186,43 +162,7 @@
                 <h3>Mokomasi</h3>
               </div>
 
-              <div class="kanban-cards">
-                <!-- Įgūdis 3 -->
-                <div class="skill-kanban-card">
-                  <div class="card-icon icon-learning"><i class="bi bi-motherboard"></i></div>
-                  <div class="card-details">
-                    <h5>STM32 ARM programavimas</h5>
-                    <div class="card-badges">
-                      <span class="badge-status status-learning">Būsena: Mokomasi</span>
-                      <span class="badge-xp">XP: 60</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Įgūdis 4 -->
-                <div class="skill-kanban-card">
-                  <div class="card-icon icon-learning"><i class="bi bi-diagram-3"></i></div>
-                  <div class="card-details">
-                    <h5>Daugiasluoksnis PCB išdėstymas</h5>
-                    <div class="card-badges">
-                      <span class="badge-status status-learning">Būsena: Mokomasi</span>
-                      <span class="badge-xp">XP: 50</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Įgūdis 5 -->
-                <div class="skill-kanban-card">
-                  <div class="card-icon icon-learning"><i class="bi bi-filetype-js"></i></div>
-                  <div class="card-details">
-                    <h5>JavaScript ir DOM valdymas</h5>
-                    <div class="card-badges">
-                      <span class="badge-status status-learning">Būsena: Mokomasi</span>
-                      <span class="badge-xp">XP: 30</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="kanban-cards" id="cards-learning"></div>
             </div>
           </div>
 
@@ -234,43 +174,7 @@
                 <h3>Atlikta</h3>
               </div>
 
-              <div class="kanban-cards">
-                <!-- Įgūdis 6 -->
-                <div class="skill-kanban-card">
-                  <div class="card-icon icon-done"><i class="bi bi-code-square"></i></div>
-                  <div class="card-details">
-                    <h5>Embedded C/C++ architektūra</h5>
-                    <div class="card-badges">
-                      <span class="badge-status status-done">Būsena: Atlikta</span>
-                      <span class="badge-xp">XP: 60</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Įgūdis 7 -->
-                <div class="skill-kanban-card">
-                  <div class="card-icon icon-done"><i class="bi bi-activity"></i></div>
-                  <div class="card-details">
-                    <h5>Osciloskopo ir signalų analizė</h5>
-                    <div class="card-badges">
-                      <span class="badge-status status-done">Būsena: Atlikta</span>
-                      <span class="badge-xp">XP: 40</span>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Įgūdis 8 -->
-                <div class="skill-kanban-card">
-                  <div class="card-icon icon-done"><i class="bi bi-terminal"></i></div>
-                  <div class="card-details">
-                    <h5>Python duomenų apdorojimas</h5>
-                    <div class="card-badges">
-                      <span class="badge-status status-done">Būsena: Atlikta</span>
-                      <span class="badge-xp">XP: 40</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="kanban-cards" id="cards-done"></div>
             </div>
           </div>
 

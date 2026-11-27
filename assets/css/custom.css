@@ -930,3 +930,92 @@ a:active {
   background-color: rgba(212, 175, 55, 0.15) !important;
   transform: translateY(-2px);
 }
+
+/* Būsenos keitimo pasirinkimas kortelėje (Kompetencijų 2a užduotis) */
+.skill-kanban-card .status-select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(11, 29, 22, 0.9);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 6px;
+  padding: 3px 24px 3px 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%23d4af37' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 7px center;
+}
+
+.skill-kanban-card .status-select:hover,
+.skill-kanban-card .status-select:focus {
+  border-color: #d4af37;
+}
+
+.skill-kanban-card .status-select.status-planned {
+  color: #a89f91;
+  border-color: rgba(168, 159, 145, 0.45);
+}
+
+.skill-kanban-card .status-select.status-learning {
+  color: #e08e45;
+  border-color: rgba(224, 142, 69, 0.5);
+}
+
+.skill-kanban-card .status-select.status-done {
+  color: #d4af37;
+  border-color: rgba(212, 175, 55, 0.6);
+}
+
+.skill-kanban-card .status-select option {
+  background-color: #0b1d16;
+  color: #f3f1ed;
+}
+
+/* Kortelės būsenos perjungimo juosta (Kompetencijų 2a užduotis) */
+.skill-kanban-card .status-switcher {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(212, 175, 55, 0.14);
+}
+
+.skill-kanban-card .status-btn {
+  flex: 1;
+  background-color: rgba(11, 29, 22, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #a89f91;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 4px 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.skill-kanban-card .status-btn:hover {
+  border-color: rgba(212, 175, 55, 0.45);
+  color: #f3f1ed;
+}
+
+.skill-kanban-card .status-btn.active-planned {
+  background-color: rgba(168, 159, 145, 0.18);
+  border-color: rgba(168, 159, 145, 0.55);
+  color: #e6dfd5;
+}
+
+.skill-kanban-card .status-btn.active-learning {
+  background-color: rgba(224, 142, 69, 0.18);
+  border-color: rgba(224, 142, 69, 0.6);
+  color: #e08e45;
+}
+
+.skill-kanban-card .status-btn.active-done {
+  background-color: rgba(212, 175, 55, 0.18);
+  border-color: rgba(212, 175, 55, 0.65);
+  color: #d4af37;
+}
